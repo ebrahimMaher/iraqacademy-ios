@@ -1,0 +1,16 @@
+//
+//  iacademy_TST.xcconfig
+//  iacademy
+//
+//  Created by Marwan Osama on 13/12/2025.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-iacademy/Pods-iacademy.test_debug.xcconfig"
+
+BASE_API_URL = https:/$()/api-nippur.ebmsoft.net/api_NiCP8607fppur42/
+API_KEY = R40CQbnujNzW+/9gYK4A4tPF94Q/vDyYMSpS9C/Q2x9/7sFUiklx6wTTTIqJ4Aeo2NEtQ39lrnMpIo8de7Da
+PASS_PHRASE = nippur-header-key
+VDO_KEY = accYN9Fa_rV0fxCPMn

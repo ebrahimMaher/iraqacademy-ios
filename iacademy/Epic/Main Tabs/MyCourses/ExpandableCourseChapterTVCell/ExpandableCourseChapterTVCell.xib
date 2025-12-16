@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+        <array key="Rubik-SemiBold.ttf">
+            <string>Rubik-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExpandableCourseChapterTVCell" rowHeight="382" id="KGk-i7-Jjw" customClass="ExpandableCourseChapterTVCell" customModule="Nippur_Academy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="382"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="382"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m75-1C-CPU">
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="70"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nDh-oR-ctn">
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-m4-yqi">
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-5T-8uB">
+                                                <rect key="frame" x="278.33333333333331" y="23.666666666666664" width="88.666666666666686" height="22.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم الدورة" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-dc-9Oq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="22.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 محاضرات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-Jd-Dq6">
+                                                        <rect key="frame" x="20" y="22.666666666666668" width="68.666666666666671" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                        <color key="textColor" name="Gray_400"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-ED-u4s">
+                                                <rect key="frame" x="12" y="23" width="24" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-WT-bKI">
+                                                        <rect key="frame" x="4.6666666666666679" y="8.3333333333333321" width="15" height="8.6666666666666679"/>
+                                                        <color key="tintColor" name="Blue_Brand_950"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                    </imageView>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0kI-gw-Cfb">
+                                                        <rect key="frame" x="2" y="2" width="20" height="20"/>
+                                                        <color key="color" name="Blue_Brand_500"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="eMF-WT-bKI" firstAttribute="centerX" secondItem="gTp-ED-u4s" secondAttribute="centerX" id="6RG-Sr-aKX"/>
+                                                    <constraint firstItem="eMF-WT-bKI" firstAttribute="centerY" secondItem="gTp-ED-u4s" secondAttribute="centerY" id="72h-9q-tQX"/>
+                                                    <constraint firstItem="0kI-gw-Cfb" firstAttribute="centerY" secondItem="gTp-ED-u4s" secondAttribute="centerY" id="L1A-BA-AaS"/>
+                                                    <constraint firstAttribute="width" constant="24" id="P38-zq-toQ"/>
+                                                    <constraint firstItem="0kI-gw-Cfb" firstAttribute="centerX" secondItem="gTp-ED-u4s" secondAttribute="centerX" id="lEh-jt-d8u"/>
+                                                    <constraint firstAttribute="height" constant="24" id="pC7-XK-KI0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-lr-g5O">
+                                                <rect key="frame" x="0.0" y="0.0" width="379" height="70"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="expandCollapseTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wiH-eZ-Sfa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bMT-lr-g5O" firstAttribute="leading" secondItem="K0u-m4-yqi" secondAttribute="leading" id="4Pl-Aq-K83"/>
+                                            <constraint firstAttribute="bottom" secondItem="bMT-lr-g5O" secondAttribute="bottom" id="6zY-Sh-aqW"/>
+                                            <constraint firstItem="gTp-ED-u4s" firstAttribute="leading" secondItem="K0u-m4-yqi" secondAttribute="leading" constant="12" id="DPd-ug-xqN"/>
+                                            <constraint firstItem="gTp-ED-u4s" firstAttribute="centerY" secondItem="K0u-m4-yqi" secondAttribute="centerY" id="Sba-Op-hbk"/>
+                                            <constraint firstAttribute="trailing" secondItem="bMT-lr-g5O" secondAttribute="trailing" id="XFV-jR-6IK"/>
+                                            <constraint firstItem="N4L-5T-8uB" firstAttribute="centerY" secondItem="K0u-m4-yqi" secondAttribute="centerY" id="duD-Zo-mfq"/>
+                                            <constraint firstItem="bMT-lr-g5O" firstAttribute="top" secondItem="K0u-m4-yqi" secondAttribute="top" id="ojs-vS-FaE"/>
+                                            <constraint firstAttribute="height" constant="70" id="omA-Sc-BSf"/>
+                                            <constraint firstAttribute="trailing" secondItem="N4L-5T-8uB" secondAttribute="trailing" constant="12" id="pdu-Wy-A8O"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-vw-e93">
+                                        <rect key="frame" x="0.0" y="70" width="379" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="LqG-Pm-7Bh"/>
+                                        </constraints>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nDh-oR-ctn" secondAttribute="bottom" id="MyX-tm-c5L"/>
+                            <constraint firstAttribute="trailing" secondItem="nDh-oR-ctn" secondAttribute="trailing" id="Pnr-FY-mXO"/>
+                            <constraint firstItem="nDh-oR-ctn" firstAttribute="top" secondItem="m75-1C-CPU" secondAttribute="top" id="QxQ-tk-dYP"/>
+                            <constraint firstItem="nDh-oR-ctn" firstAttribute="leading" secondItem="m75-1C-CPU" secondAttribute="leading" id="mfq-It-myY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                <color key="value" name="Blue_Brand_50"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="m75-1C-CPU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HwJ-By-Jtg"/>
+                    <constraint firstAttribute="trailing" secondItem="m75-1C-CPU" secondAttribute="trailing" id="Jfg-b8-QyA"/>
+                    <constraint firstAttribute="bottom" secondItem="m75-1C-CPU" secondAttribute="bottom" constant="10" id="N9s-fR-D9O"/>
+                    <constraint firstItem="m75-1C-CPU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gVK-QA-ngo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="activityIndicator" destination="0kI-gw-Cfb" id="bLZ-yC-xef"/>
+                <outlet property="chapterNameLabel" destination="RIX-dc-9Oq" id="pUF-00-CpU"/>
+                <outlet property="chevronExpandImageView" destination="eMF-WT-bKI" id="1j6-O0-gpT"/>
+                <outlet property="itemsTV" destination="KeF-vw-e93" id="XZm-bp-071"/>
+                <outlet property="itemsTVHeight" destination="LqG-Pm-7Bh" id="i3c-Gg-THe"/>
+                <outlet property="stackView" destination="nDh-oR-ctn" id="AAT-TC-xuB"/>
+                <outlet property="videosCountLabel" destination="Xaz-Jd-Dq6" id="VuN-VS-7ce"/>
+            </connections>
+            <point key="canvasLocation" x="64.885496183206101" y="175.35211267605635"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="Blue_Brand_50">
+            <color red="0.92500001192092896" green="0.92199999094009399" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue_Brand_500">
+            <color red="0.046999998390674591" green="0.046999998390674591" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue_Brand_950">
+            <color red="0.024000000208616257" green="0.019999999552965164" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray_400">
+            <color red="0.5690000057220459" green="0.56499999761581421" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

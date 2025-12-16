@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeTeachersCVCell" id="gTV-IL-0wX" customClass="HomeTeachersCVCell" customModule="Nippur_Academy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="101"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6K-tI-sVq">
+                        <rect key="frame" x="0.0" y="60" width="90" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" عمر ابشارات عمر ابشارات" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaR-J9-aMt">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="41"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WaR-J9-aMt" firstAttribute="top" secondItem="e6K-tI-sVq" secondAttribute="top" id="9c6-UH-N2l"/>
+                            <constraint firstAttribute="trailing" secondItem="WaR-J9-aMt" secondAttribute="trailing" id="LUr-nQ-9o6"/>
+                            <constraint firstAttribute="bottom" secondItem="WaR-J9-aMt" secondAttribute="bottom" id="ZjY-1x-oN5"/>
+                            <constraint firstItem="WaR-J9-aMt" firstAttribute="leading" secondItem="e6K-tI-sVq" secondAttribute="leading" id="jSt-E3-m5w"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rK8-az-hcU">
+                        <rect key="frame" x="15" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Du1-0P-R39"/>
+                            <constraint firstAttribute="width" constant="60" id="v2g-bH-3bl"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                <color key="value" name="Gray_100"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="e6K-tI-sVq" firstAttribute="top" secondItem="rK8-az-hcU" secondAttribute="bottom" id="2fT-XR-LnM"/>
+                <constraint firstItem="e6K-tI-sVq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Nc-fd-utN"/>
+                <constraint firstAttribute="trailing" secondItem="e6K-tI-sVq" secondAttribute="trailing" id="c48-Oe-V7e"/>
+                <constraint firstItem="rK8-az-hcU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gqc-c2-znc"/>
+                <constraint firstAttribute="bottom" secondItem="e6K-tI-sVq" secondAttribute="bottom" id="pAS-Qm-S1g"/>
+                <constraint firstItem="rK8-az-hcU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tc4-Ce-29Z"/>
+            </constraints>
+            <size key="customSize" width="90" height="101"/>
+            <connections>
+                <outlet property="teacherImageView" destination="rK8-az-hcU" id="IyE-X2-a4h"/>
+                <outlet property="teacherNameLabel" destination="WaR-J9-aMt" id="EhJ-Um-Xu8"/>
+            </connections>
+            <point key="canvasLocation" x="114.50381679389312" y="26.408450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="avatar_placeholder" width="64" height="64"/>
+        <namedColor name="Gray_100">
+            <color red="0.89399999380111694" green="0.88999998569488525" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

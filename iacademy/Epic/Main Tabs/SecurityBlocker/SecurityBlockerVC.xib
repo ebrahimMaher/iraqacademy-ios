@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecurityBlockerVC" customModule="Nippur_Academy" customModuleProvider="target">
+            <connections>
+                <outlet property="headerLbl" destination="sqx-4b-BIk" id="rrL-n8-SqV"/>
+                <outlet property="messageLbl" destination="tyN-Mn-EMp" id="yWa-8M-nnS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBp-VT-u8h">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecurityBreach" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-Th-bUR">
+                            <rect key="frame" x="0.0" y="157.33333333333337" width="393" height="367"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqx-4b-BIk">
+                            <rect key="frame" x="24" y="454.33333333333331" width="345" height="28.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" name="Red_500"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-Mn-EMp">
+                            <rect key="frame" x="24" y="499" width="345" height="19.333333333333371"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="Gray_400"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0NZ-Th-bUR" firstAttribute="centerY" secondItem="eBp-VT-u8h" secondAttribute="centerY" multiplier="0.8" id="7cl-AW-kuf"/>
+                        <constraint firstAttribute="trailing" secondItem="0NZ-Th-bUR" secondAttribute="trailing" id="GwG-4s-MJV"/>
+                        <constraint firstItem="tyN-Mn-EMp" firstAttribute="top" secondItem="sqx-4b-BIk" secondAttribute="bottom" constant="16" id="R95-Gi-lBv"/>
+                        <constraint firstItem="tyN-Mn-EMp" firstAttribute="leading" secondItem="eBp-VT-u8h" secondAttribute="leading" constant="24" id="fbf-MO-Vy3"/>
+                        <constraint firstAttribute="trailing" secondItem="sqx-4b-BIk" secondAttribute="trailing" constant="24" id="mTo-95-KTJ"/>
+                        <constraint firstItem="0NZ-Th-bUR" firstAttribute="leading" secondItem="eBp-VT-u8h" secondAttribute="leading" id="qGV-BH-ePy"/>
+                        <constraint firstItem="sqx-4b-BIk" firstAttribute="centerY" secondItem="eBp-VT-u8h" secondAttribute="centerY" multiplier="1.1" id="r4F-B2-MMN"/>
+                        <constraint firstItem="sqx-4b-BIk" firstAttribute="leading" secondItem="eBp-VT-u8h" secondAttribute="leading" constant="24" id="voe-J6-a7S"/>
+                        <constraint firstAttribute="trailing" secondItem="tyN-Mn-EMp" secondAttribute="trailing" constant="24" id="xRP-lI-Q3C"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eBp-VT-u8h" secondAttribute="trailing" id="Yun-4T-mfI"/>
+                <constraint firstItem="eBp-VT-u8h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gZG-8M-Y82"/>
+                <constraint firstAttribute="bottom" secondItem="eBp-VT-u8h" secondAttribute="bottom" id="j5y-kq-vv3"/>
+                <constraint firstItem="eBp-VT-u8h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="x1D-df-c9M"/>
+            </constraints>
+            <point key="canvasLocation" x="105" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SecurityBreach" width="612" height="367"/>
+        <namedColor name="Gray_400">
+            <color red="0.5690000057220459" green="0.56499999761581421" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red_500">
+            <color red="0.92500001192092896" green="0.23899999260902405" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

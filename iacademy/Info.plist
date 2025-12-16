@@ -2,24 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
+	<key>API_KEY</key>
+	<string>$(API_KEY)</string>
+	<key>BASE_API_URL</key>
+	<string>$(BASE_API_URL)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
 		<dict>
-			<key>UIWindowSceneSessionRoleApplication</key>
+			<key>CFBundleURLName</key>
+			<string>com.nippuracademy.application</string>
+			<key>CFBundleURLSchemes</key>
 			<array>
-				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-				</dict>
+				<string>nippuracademy</string>
 			</array>
 		</dict>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
 	</dict>
+	<key>PASS_PHRASE</key>
+	<string>$(PASS_PHRASE)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Rubik-Black.ttf</string>
+		<string>Rubik-Bold.ttf</string>
+		<string>Rubik-ExtraBold.ttf</string>
+		<string>Rubik-SemiBold.ttf</string>
+		<string>Rubik-Medium.ttf</string>
+		<string>Rubik-Regular.ttf</string>
+		<string>Rubik-Light.ttf</string>
+		<string>IBMPlexSansArabic-SemiBold.ttf</string>
+		<string>IBMPlexSansArabic-Medium.ttf</string>
+		<string>IBMPlexSansArabic-Bold.ttf</string>
+		<string>IBMPlexSansArabic-ExtraLight.ttf</string>
+		<string>IBMPlexSansArabic-Light.ttf</string>
+		<string>IBMPlexSansArabic-Regular.ttf</string>
+		<string>IBMPlexSansArabic-Thin.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>VDO_KEY</key>
+	<string>$(VDO_KEY)</string>
 </dict>
 </plist>

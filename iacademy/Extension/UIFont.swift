@@ -9,6 +9,24 @@ import UIKit
 
 extension UIFont {
     
+    @objc enum AppFontWeight: Int {
+        case light = 0
+        case regular
+        case medium
+        case semibold
+        case bold
+
+        var uiWeight: UIFont.Weight {
+            switch self {
+            case .light: return .light
+            case .regular: return .regular
+            case .medium: return .medium
+            case .semibold: return .semibold
+            case .bold: return .bold
+            }
+        }
+    }
+    
     static func rubikFont(weight: UIFont.Weight, size: CGFloat) -> UIFont {
         switch weight {
         case .black:
@@ -48,6 +66,23 @@ extension UIFont {
             return UIFont(name: "IBMPlexSansArabic-Thin", size: size)!
         default:
             return UIFont(name: "IBMPlexSansArabic-Medium", size: size)!
+        }
+    }
+    
+    static func avenir(weight: UIFont.Weight, size: CGFloat) -> UIFont {
+        switch weight {
+        case .light:
+            return UIFont(name: "AvenirArabic-Light", size: size)!
+        case .regular:
+            return UIFont(name: "AvenirArabic-Book", size: size)!
+        case .medium:
+            return UIFont(name: "AvenirArabic-Medium", size: size)!
+        case .semibold:
+            return UIFont(name: "AvenirArabic-Heavy", size: size)!
+        case .bold:
+            return UIFont(name: "AvenirArabic-Black", size: size)!
+        default:
+            return UIFont(name: "AvenirArabic-Medium", size: size)!
         }
     }
 }

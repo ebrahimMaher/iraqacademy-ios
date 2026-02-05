@@ -32,6 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupNotifications(application)
         AppCoordinator.shared.start(in: window)
         
+        for family in UIFont.familyNames.sorted() {
+            print("Family: \(family)")
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("   \(name)")
+            }
+        }
+        
         return true
     }
     
@@ -40,8 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if let window = UIApplication.shared.windows.first,
                    let rootVC = window.rootViewController {
-                    let userVerificationVC = rootVC.findViewController(ofType: UserVerificationVC.self)
-                    userVerificationVC?.safariVC?.dismiss(animated: true)
+//                    let userVerificationVC = rootVC.findViewController(ofType: UserVerificationVC.self)
+//                    userVerificationVC?.safariVC?.dismiss(animated: true)
                     CacheClient.shared.isAccountVerified = true
                     AppCoordinator.shared.setRoot(to: .main)
                 }
@@ -56,9 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     if let window = UIApplication.shared.windows.first,
                        let rootVC = window.rootViewController {
-                        let resetPasswordVC = rootVC.findViewController(ofType: ResetPasswordVC.self)
-                        resetPasswordVC?.safariVC?.dismiss(animated: true)
-                        AppCoordinator.shared.navigate(to: .setNewPassword(token: token))
+//                        let resetPasswordVC = rootVC.findViewController(ofType: ResetPasswordVC.self)
+//                        resetPasswordVC?.safariVC?.dismiss(animated: true)
+//                        AppCoordinator.shared.navigate(to: .setNewPassword(token: token))
                     }
                     
                 }
@@ -76,6 +83,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         NFX.sharedInstance().start()
         #endif
+        
+        
     }
     
     func addFloatingWatermark() {

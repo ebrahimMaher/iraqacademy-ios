@@ -57,7 +57,7 @@ class AppCoordinator {
             case .AppEntryPoint: viewControllers.removeAll(where: { $0 is AppEntryPointVC })
             case .login: viewControllers.removeAll(where: { $0 is LoginVC })
             case .register: viewControllers.removeAll(where: { $0 is RegisterVC })
-            case .userVerification: viewControllers.removeAll(where: { $0 is UserVerificationVC })
+//            case .userVerification: viewControllers.removeAll(where: { $0 is UserVerificationVC })
             default: return
             }
             navigationController?.setViewControllers(viewControllers, animated: true)
@@ -84,52 +84,8 @@ class AppCoordinator {
             return LoginVC()
         case .register:
             return RegisterVC()
-        case .userVerification:
-            return UserVerificationVC()
-        case .userVerificationWebView(let url):
-            let vc = UserVerificationWebViewVC()
-            vc.url = url
-            return vc
-        case .resetPassword:
-            return ResetPasswordVC()
-        case .otp:
-            return OtpVC()
         case .main:
             return MainTabbarController()
-        case .home:
-            return HomeVC()
-        case .myCourses:
-            return MyCoursesVC()
-        case .notifications:
-            return NotificationsVC()
-        case .profile:
-            return ProfileVC()
-        case .editProfile(let onUpdate):
-            let vc = EditProfileVC()
-            vc.onProfileUpdated = onUpdate
-            return vc
-        case .changePassword:
-            return ChangePasswordVC()
-        case .settings:
-            return SettingsVC()
-        case .courseDetails(let courseID):
-            let vc = CourseDetailsVC()
-            vc.courseID = courseID
-            return vc
-        case .lecturesDetails(let lectureID, let lectureName):
-            let vc = LectureDetailsVC()
-            vc.lectureID = lectureID
-            vc.lectureName = lectureName
-            return vc
-        case .teacherCourses(let teacherID, let teacherName):
-            let vc = TeacherCoursesVC()
-            vc.teacherID = teacherID
-            vc.teacherName = teacherName
-            return vc
-        case .setNewPassword(let token):
-            let vc = SetNewPasswordVC()
-            vc.token = token
-            return vc
         case .standardPlayer(let url):
             let vc = StandardPlayerViewController(videoURL: url)
             vc.modalPresentationStyle = .fullScreen
@@ -146,8 +102,8 @@ class AppCoordinator {
             let vc = DRMPlayerViewController(videoURL: videoURL, licenseURL: licenseURL, certificateURL: certificateURL)
             vc.modalPresentationStyle = .fullScreen
             return vc
-        case .idVerification:
-            return IDVerificationVC()
+//        case .idVerification:
+//            return IDVerificationVC()
         case .securityBlocker:
             return SecurityBlockerVC()
         }
@@ -157,27 +113,11 @@ class AppCoordinator {
         case AppEntryPoint
         case login
         case register
-        case userVerification
-        case userVerificationWebView(url: String)
-        case resetPassword
-        case otp
         case main
-        case home
-        case myCourses
-        case notifications
-        case profile
-        case editProfile(onUpdate: (() -> Void)? = nil)
-        case changePassword
-        case settings
-        case courseDetails(courseID: Int)
-        case lecturesDetails(lectureID: String, lectureName: String)
-        case teacherCourses(teacherID: String?, teacherName: String?)
-        case setNewPassword(token: String)
         case standardPlayer(url: String)
         case adaptivePlayer(qualities: [(String, String)]) // [Quality -> URL]
         case vdoCipherPlayer(videoID: String, otp: String, playbackInfo: String)
         case drmPlayer(videoURL: String, licenseURL: String, certificateURL: String)
-        case idVerification
         case securityBlocker
     }
 }

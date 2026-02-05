@@ -43,6 +43,39 @@ extension UIColor {
         return UIColor(named: "Blue_Brand_950")!
     }
     
+    @nonobjc class var Black_50: UIColor {
+        return UIColor(named: "Black_50")!
+    }
+    @nonobjc class var Black_100: UIColor {
+        return UIColor(named: "Black_100")!
+    }
+    @nonobjc class var Black_200: UIColor {
+        return UIColor(named: "Black_200")!
+    }
+    @nonobjc class var Black_300: UIColor {
+        return UIColor(named: "Black_300")!
+    }
+    @nonobjc class var Black_400: UIColor {
+        return UIColor(named: "Black_400")!
+    }
+    @nonobjc class var Black_500: UIColor {
+        return UIColor(named: "Black_500")!
+    }
+    @nonobjc class var Black_600: UIColor {
+        return UIColor(named: "Black_600")!
+    }
+    @nonobjc class var Black_700: UIColor {
+        return UIColor(named: "Black_700")!
+    }
+    @nonobjc class var Black_800: UIColor {
+        return UIColor(named: "Black_800")!
+    }
+    @nonobjc class var Black_900: UIColor {
+        return UIColor(named: "Black_900")!
+    }
+    @nonobjc class var Black_950: UIColor {
+        return UIColor(named: "Black_950")!
+    }
     
     @nonobjc class var Blue_50: UIColor {
         return UIColor(named: "Blue_50")!

@@ -26,6 +26,12 @@
 	<string>$(PASS_PHRASE)</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>avenir-arabic-black.otf</string>
+		<string>avenir-arabic-regular.otf</string>
+		<string>avenir-arabic-book.otf</string>
+		<string>avenir-arabic-heavy.otf</string>
+		<string>avenir-arabic-light.otf</string>
+		<string>avenir-arabic-medium.otf</string>
 		<string>Rubik-Black.ttf</string>
 		<string>Rubik-Bold.ttf</string>
 		<string>Rubik-ExtraBold.ttf</string>

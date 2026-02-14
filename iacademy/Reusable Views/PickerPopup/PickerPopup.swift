@@ -22,6 +22,7 @@ class PickerPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     var sender: Any?
 
     var didPickValue: ((Int)->())?
+    var didDismiss: (()->())?
 
     
     static func instance() -> PickerPopup{
@@ -47,6 +48,11 @@ class PickerPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         if selectedIndex >= 0 {
             picker.selectRow(selectedIndex, inComponent: 0, animated: false)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        didDismiss?()
     }
     
     override func didReceiveMemoryWarning() {

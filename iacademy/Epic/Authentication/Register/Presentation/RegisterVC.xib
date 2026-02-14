@@ -28,12 +28,17 @@
                 <outlet property="emailView" destination="r0K-ad-DnY" id="WGa-Bc-cJD"/>
                 <outlet property="fullNameTF" destination="oV3-k2-75I" id="PZ4-Ys-Sjg"/>
                 <outlet property="fullNameView" destination="f6Q-Ma-55k" id="i2z-gn-Svt"/>
+                <outlet property="parentPhoneTF" destination="iaY-kv-GFQ" id="l9Z-PG-jIQ"/>
+                <outlet property="parentPhoneView" destination="fUk-eW-mk2" id="x0N-fq-7t9"/>
                 <outlet property="passwordTF" destination="vps-IX-aOL" id="jsE-CE-9fh"/>
                 <outlet property="passwordView" destination="rVn-84-6Dl" id="OZT-fb-laN"/>
                 <outlet property="phoneTF" destination="Ohw-gg-vov" id="Ccd-YC-5RR"/>
                 <outlet property="phoneView" destination="ZL0-Jf-glp" id="dQZ-ye-mxy"/>
+                <outlet property="schoolTF" destination="qK1-ih-lzC" id="NV4-tD-FDJ"/>
+                <outlet property="schoolView" destination="h7c-9j-cs9" id="xSd-u2-LGp"/>
                 <outlet property="securePasswordButton" destination="Ewb-TX-tmY" id="IvU-Cc-I6Q"/>
                 <outlet property="specialityTF" destination="BgY-6M-8fy" id="o6y-FE-lAp"/>
+                <outlet property="specialityView" destination="b7t-Af-eNJ" id="3KN-5w-aBo"/>
                 <outlet property="successMessageLabel" destination="NU4-uC-mw1" id="ezX-5H-zj7"/>
                 <outlet property="successView" destination="IHb-dx-Fsv" id="9i4-2r-mTy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -44,18 +49,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="1182"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oo-Dw-a2T" customClass="NavigationHeader" customModule="iacademy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="60"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-My-mAJ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="JN2-Ef-5hp"/>
+                        <constraint firstAttribute="height" constant="100" id="V00-Nt-7dD"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="حساب جديد"/>
-                    </userDefinedRuntimeAttributes>
-                </view>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-ji-zn4">
+                    <rect key="frame" x="0.0" y="89" width="393" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="dbt-Cf-v0J"/>
+                    </constraints>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4n-AT-glb">
-                    <rect key="frame" x="0.0" y="119" width="393" height="882"/>
+                    <rect key="frame" x="0.0" y="147" width="393" height="854"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNG-NX-FlY">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="762"/>
@@ -433,6 +440,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zev-KI-fBN">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="52"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="schoolTapped:" destination="-1" eventType="touchUpInside" id="Tb1-nG-dwv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -567,6 +577,9 @@
                                             <integer key="value" value="2"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="y40-am-oZU"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لديك حساب بالفعل!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPe-CA-Str" customClass="AppLabel" customModule="iacademy" customModuleProvider="target">
                                     <rect key="frame" x="100" y="0.0" width="127" height="34"/>
@@ -603,8 +616,8 @@
                         <constraint firstAttribute="height" constant="1" id="6ff-Xk-ufg"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHb-dx-Fsv" userLabel="SuccessView">
-                    <rect key="frame" x="0.0" y="1148" width="393" height="20"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHb-dx-Fsv" userLabel="SuccessView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="1089"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4B4-Zp-nV1">
                             <rect key="frame" x="16" y="423" width="362" height="243"/>
@@ -670,22 +683,25 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="myP-pJ-dOm" secondAttribute="bottom" constant="10" id="1vX-fy-CNh"/>
-                <constraint firstItem="5oo-Dw-a2T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DMU-YQ-C85"/>
+                <constraint firstItem="tjo-ji-zn4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="50s-Wq-Wsm"/>
+                <constraint firstItem="2vf-My-mAJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8gv-0m-TGE"/>
+                <constraint firstItem="2vf-My-mAJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cvc-Yq-wub"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QVv-ex-tDQ" secondAttribute="trailing" constant="16" id="EHh-rB-3fA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IHb-dx-Fsv" secondAttribute="bottom" id="GIX-8T-3aV"/>
                 <constraint firstItem="IHb-dx-Fsv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J90-a0-oSg"/>
+                <constraint firstItem="b4n-AT-glb" firstAttribute="top" secondItem="tjo-ji-zn4" secondAttribute="bottom" constant="10" id="Lb5-HK-YlQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b4n-AT-glb" secondAttribute="trailing" id="Md7-aj-EfG"/>
                 <constraint firstItem="myP-pJ-dOm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OgK-GU-hps"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5oo-Dw-a2T" secondAttribute="trailing" id="SjW-Gk-wxz"/>
                 <constraint firstItem="TU8-PR-BPQ" firstAttribute="top" secondItem="b4n-AT-glb" secondAttribute="bottom" constant="10" id="VL5-vc-8hK"/>
+                <constraint firstItem="2vf-My-mAJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WF3-0z-4SL"/>
                 <constraint firstItem="IHb-dx-Fsv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="cdB-Hz-Y52"/>
-                <constraint firstItem="b4n-AT-glb" firstAttribute="top" secondItem="5oo-Dw-a2T" secondAttribute="bottom" id="dUv-lU-pcJ"/>
                 <constraint firstItem="QVv-ex-tDQ" firstAttribute="top" secondItem="TU8-PR-BPQ" secondAttribute="bottom" constant="16" id="e0X-ap-d76"/>
                 <constraint firstItem="QVv-ex-tDQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gbd-ea-ib2"/>
                 <constraint firstItem="b4n-AT-glb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hdf-ZI-jgw"/>
                 <constraint firstItem="TU8-PR-BPQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hz4-gy-AQt"/>
-                <constraint firstItem="5oo-Dw-a2T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ldj-Kd-1EI"/>
+                <constraint firstItem="tjo-ji-zn4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="njH-RD-CQs"/>
                 <constraint firstItem="IHb-dx-Fsv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="swb-Nh-Vq4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tjo-ji-zn4" secondAttribute="trailing" id="uNf-nb-Tha"/>
                 <constraint firstItem="myP-pJ-dOm" firstAttribute="top" secondItem="QVv-ex-tDQ" secondAttribute="bottom" constant="16" id="x9I-Hc-HcE"/>
                 <constraint firstAttribute="trailing" secondItem="TU8-PR-BPQ" secondAttribute="trailing" id="yYd-qK-pK9"/>
             </constraints>
@@ -697,6 +713,8 @@
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="congratulations" width="56" height="56"/>
         <image name="eye" catalog="system" width="128" height="79"/>
+        <image name="login_bg" width="375" height="101"/>
+        <image name="logo" width="141" height="48"/>
         <namedColor name="Blue_Brand_500">
             <color red="0.12200000137090683" green="0.68599998950958252" blue="0.67799997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

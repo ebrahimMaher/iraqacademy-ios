@@ -62,7 +62,7 @@ class LoginVC: UIViewController {
             AppCoordinator.shared.setRoot(to: .main)
         } else {
             CacheClient.shared.isAccountVerified = false
-//            AppCoordinator.shared.navigate(to: .userVerification)
+            AppCoordinator.shared.navigate(to: .userVerification)
         }
     }
     
@@ -93,7 +93,7 @@ class LoginVC: UIViewController {
         let userModel = CacheClient.shared.userModel
         if isLoggedIn, !isVerified, let name = userModel?.name, let phone = userModel?.phone {
             showAlertWithCancel(title: "إكمال عملية التحقق", message: "لقد قمت بتسجيل الدخول مسبقًا بهذا الرقم \(phone) والاسم \(name)، هل ترغب في متابعة عملية التحقق؟", okActionName: "إكمال") {
-//                AppCoordinator.shared.navigate(to: .userVerification)
+                AppCoordinator.shared.navigate(to: .userVerification)
             }
         }
     }
@@ -123,7 +123,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgetPasswordTapped(_ sender: UIButton) {
-//        AppCoordinator.shared.navigate(to: .resetPassword)
+        AppCoordinator.shared.navigate(to: .forgetPassword)
     }
     
     

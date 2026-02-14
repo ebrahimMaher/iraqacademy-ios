@@ -84,6 +84,14 @@ class AppCoordinator {
             return LoginVC()
         case .register:
             return RegisterVC()
+        case .userVerification:
+            return UserVerificationVC()
+        case .forgetPassword:
+            return ForgetPasswordVC()
+        case .setNewPassword(let token):
+            let vc = SetNewPasswordVC()
+            vc.token = token
+            return vc
         case .main:
             return MainTabbarController()
         case .standardPlayer(let url):
@@ -113,6 +121,9 @@ class AppCoordinator {
         case AppEntryPoint
         case login
         case register
+        case userVerification
+        case forgetPassword
+        case setNewPassword(token: String)
         case main
         case standardPlayer(url: String)
         case adaptivePlayer(qualities: [(String, String)]) // [Quality -> URL]

@@ -14,15 +14,21 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var fullNameView: UIView!
     @IBOutlet weak var fullNameTF: UITextField!
     
-    
-    @IBOutlet weak var specialityTF: UITextField!
-    
-    @IBOutlet weak var phoneTF: UITextField!
-    @IBOutlet weak var phoneView: UIView!
-
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var emailView: UIView!
     
+    @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var phoneView: UIView!
+    
+    @IBOutlet weak var parentPhoneView: UIView!
+    @IBOutlet weak var parentPhoneTF: AppTextField!
+    
+    @IBOutlet weak var schoolView: UIView!
+    @IBOutlet weak var schoolTF: AppTextField!
+    
+    @IBOutlet weak var specialityView: UIView!
+    @IBOutlet weak var specialityTF: UITextField!
+        
     
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var passwordView: UIView!
@@ -49,6 +55,7 @@ class RegisterVC: UIViewController {
     }()
     
     var specialities: [Speciality] = []
+    var schools = ["School A", "School B", "School C", "School D", "School E", "School F", "School G"]
     
     private let viewModel = RegisterViewModel()
     private let loadingView = LoadingView()
@@ -159,8 +166,33 @@ class RegisterVC: UIViewController {
             specialityTF.text = specialities[index].name
             viewModel.registerRequestModel.speciality_id = specialities[index].id ?? 100
         }
+        picker.didDismiss = { [weak self] in
+            guard let self = self else { return }
+            specialityView.layer.borderColor = UIColor.gray100.cgColor
+
+        }
         let specialitiesStr = specialities.map { $0.name ?? "" }
         picker.show(vc: self, sender: nil, array: specialitiesStr, index: 0)
+        specialityView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
+
+    }
+    
+    @IBAction func schoolTapped(_ sender: UIButton) {
+        let picker = PickerPopup.instance()
+        picker.pickerTitle = "اختر المدرسة"
+        picker.didPickValue = { [weak self] index in
+            guard let self = self else { return }
+            schoolTF.text = schools[index]
+        }
+        
+        picker.didDismiss = { [weak self] in
+            guard let self = self else { return }
+            schoolView.layer.borderColor = UIColor.gray100.cgColor
+        }
+        
+        picker.show(vc: self, sender: nil, array: schools, index: 0)
+        schoolView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
+
     }
     
     @IBAction func securePasswordTapped(_ sender: UIButton) {
@@ -184,7 +216,10 @@ class RegisterVC: UIViewController {
 
     }
     
-
+    @IBAction func loginTapped(_ sender: UIButton) {
+        AppCoordinator.shared.back()
+    }
+    
     
 }
 
@@ -198,6 +233,8 @@ extension RegisterVC: UITextFieldDelegate {
                 self.fullNameView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
             } else if textField == self.emailTF {
                 self.emailView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
+            } else if textField == self.parentPhoneTF {
+                self.parentPhoneView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
             } else {
                 self.passwordView.layer.borderColor = UIColor.Blue_Brand_500.cgColor
             }
@@ -213,6 +250,8 @@ extension RegisterVC: UITextFieldDelegate {
                 self.fullNameView.layer.borderColor = UIColor.gray100.cgColor
             } else if textField == self.emailTF {
                 self.emailView.layer.borderColor = UIColor.gray100.cgColor
+            } else if textField == self.parentPhoneTF {
+                self.parentPhoneView.layer.borderColor = UIColor.gray100.cgColor
             } else {
                 self.passwordView.layer.borderColor = UIColor.gray100.cgColor
             }
